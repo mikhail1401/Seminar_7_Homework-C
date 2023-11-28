@@ -71,3 +71,38 @@ else
 {
     Console.WriteLine("There is no such number in the array");
 }
+
+
+Console.WriteLine("\n Task52");
+// Задайте двумерный массив из целых чисел. 
+// Найдите среднее арифметическое элементов в каждом столбце.
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+
+Console.Write("Enter a number of rows: ");
+int x = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Enter a number of columns: ");
+int y = Convert.ToInt32(Console.ReadLine());
+
+int[,] array = new int[x,y];
+
+for (int row=0; row<array.GetLength(0); row++)
+{
+    for (int column=0; column<array.GetLength(1); column++)
+    {
+        array[row, column] = new Random().Next(-10, 10);
+        Console.Write(array[row, column] + " ");
+    }
+    Console.WriteLine();
+}
+
+for (int column=0; column<array.GetLength(1); column++)
+{
+    for (int row=0; row<array.GetLength(0); row++)
+    {
+        double column_sum += array[row, column];
+    }
+    Console.Write
+}
