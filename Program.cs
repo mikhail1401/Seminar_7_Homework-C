@@ -12,14 +12,15 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter a number of columns: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-int[,] matrix = new int[m, n];
+double[,] matrix = new double[m, n];
 
 for (int row=0; row<matrix.GetLength(0); row++)
 {
     for (int column=0; column<matrix.GetLength(1); column++)
     {
-        matrix[row, column] = new Random().Next(-100, 100);
-        Console.Write(matrix[row, column] + " ");
+        // matrix[row, column] = new Random().NextDouble() * 100;
+        matrix[row, column] = new Random().NextDouble() + new Random().Next(-100, 100);
+        Console.Write(matrix[row, column] + "  ");
     }
     Console.WriteLine();
 }
