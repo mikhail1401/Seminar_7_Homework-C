@@ -73,7 +73,7 @@ else
 }
 
 
-Console.WriteLine("\n Task52");
+Console.WriteLine("\nTask52");
 // Задайте двумерный массив из целых чисел. 
 // Найдите среднее арифметическое элементов в каждом столбце.
 // 1 4 7 2
@@ -100,9 +100,12 @@ for (int row=0; row<array.GetLength(0); row++)
 
 for (int column=0; column<array.GetLength(1); column++)
 {
+    double column_sum = 0;
+
     for (int row=0; row<array.GetLength(0); row++)
     {
-        double column_sum += array[row, column];
+        column_sum += array[row, column];
     }
-    Console.Write
+    double column_average = column_sum / array.GetLength(0);
+    Console.Write(column_average + " ");
 }
